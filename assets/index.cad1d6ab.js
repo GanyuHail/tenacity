@@ -37916,11 +37916,11 @@ function App() {
     spotLight.position.set(12, 64, 32);
     spotLight.physicallyCorrectLights = true;
     scene.add(spotLight);
-    const loader = new threeGltfLoader().setPath("https://raw.githubusercontent.com/GanyuHail/bl3/main/src/");
+    const loader = new threeGltfLoader().setPath("https://raw.githubusercontent.com/GanyuHail/romance/main/src/");
     var dracoLoader = new threeDracoloader();
     threeDracoloader.setDecoderPath("/three-dracoloader");
     loader.setDRACOLoader(dracoLoader);
-    loader.load("baesLogoMaster5.gltf", function(gltf) {
+    loader.load("romance.gbl", function(gltf) {
       scene.add(gltf.scene);
     });
     const raycaster = new Raycaster();
@@ -37946,12 +37946,12 @@ function App() {
     }
     function onMouseDown(event) {
       if (selectedObject) {
-        window.location.href = "https://baesianz.com/";
+        window.location.href = "https://www.romancefc.com/";
       }
     }
     function touchEnd(event) {
       if (selectedObject) {
-        window.location.href = "https://baesianz.com/";
+        window.location.href = "https://www.romancefc.com/";
       }
     }
     function render() {
