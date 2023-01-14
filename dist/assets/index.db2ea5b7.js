@@ -37916,7 +37916,7 @@ function App() {
     spotLight.position.set(12, 64, 32);
     spotLight.physicallyCorrectLights = true;
     scene.add(spotLight);
-    const loader = new threeGltfLoader().setPath("https://github.com/GanyuHail/romance/blob/959c9977cca550fc588881e00254f0f1c7490530/src/");
+    const loader = new threeGltfLoader().setPath("/src");
     var dracoLoader = new threeDracoloader();
     threeDracoloader.setDecoderPath("/three-dracoloader");
     loader.setDRACOLoader(dracoLoader);
