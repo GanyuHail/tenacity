@@ -56,7 +56,7 @@ function App() {
     // spotLight.physicallyCorrectLights = true;
     // scene.add(spotLight2);
 
-    const loader = new GLTFLoader().setPath('https://raw.githubusercontent.com/GanyuHail/romance/main/src/romance.gltfhttps://raw.githubusercontent.com/GanyuHail/romance/main/src/');
+    const loader = new GLTFLoader().setPath('https://raw.githubusercontent.com/GanyuHail/romance/main/src/');
     var dracoLoader = new DRACOLoader();
     DRACOLoader.setDecoderPath('/three-dracoloader');
     loader.setDRACOLoader(dracoLoader);
