@@ -61,7 +61,7 @@ function App() {
     DRACOLoader.setDecoderPath('/three-dracoloader');
     loader.setDRACOLoader(dracoLoader);
 
-    loader.load('romance.gbtf', function (gltf) {
+    loader.load('romance.gltf', function (gltf) {
       scene.add(gltf.scene);
     });
     //   function (xhr) {
