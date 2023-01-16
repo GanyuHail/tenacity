@@ -37916,11 +37916,11 @@ function App() {
     spotLight.position.set(12, 64, 32);
     spotLight.physicallyCorrectLights = true;
     scene.add(spotLight);
-    const loader = new threeGltfLoader().setPath("https://github.com/GanyuHail/romance/blob/main/src/romance.glb?raw=true");
+    const loader = new threeGltfLoader().setPath("https://raw.githubusercontent.com/GanyuHail/romance/main/src/romance.gltfhttps://raw.githubusercontent.com/GanyuHail/romance/main/src/");
     var dracoLoader = new threeDracoloader();
     threeDracoloader.setDecoderPath("/three-dracoloader");
     loader.setDRACOLoader(dracoLoader);
-    loader.load("romance.gbl", function(gltf) {
+    loader.load("romance.gbtf", function(gltf) {
       scene.add(gltf.scene);
     });
     const raycaster = new Raycaster();
@@ -37940,7 +37940,7 @@ function App() {
         const intersect = intersects2[i];
         if (intersect && intersect.object) {
           selectedObject = intersect.object;
-          intersect.object.material.color.set("say no to transphobia");
+          intersect.object.material.color.set("pink");
         }
       }
     }
