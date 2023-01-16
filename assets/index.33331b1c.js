@@ -37920,7 +37920,7 @@ function App() {
     var dracoLoader = new threeDracoloader();
     threeDracoloader.setDecoderPath("/three-dracoloader");
     loader.setDRACOLoader(dracoLoader);
-    loader.load("romance.gbtf", function(gltf) {
+    loader.load("romance.gltf", function(gltf) {
       scene.add(gltf.scene);
     });
     const raycaster = new Raycaster();
