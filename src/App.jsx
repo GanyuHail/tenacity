@@ -24,7 +24,7 @@ function App() {
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(
-      50,
+      10,
       window.innerWidth / window.innerHeight,
       1,
       500
