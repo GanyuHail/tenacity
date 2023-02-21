@@ -37900,7 +37900,7 @@ function App() {
     };
     const scene = new Scene();
     const loader2 = new TextureLoader();
-    loader2.load("https://images.pexels.com/photos/1205301/pexels-photo-1205301.jpeg", function(texture) {
+    loader2.load("./src/filteredbg.jpg", function(texture) {
       scene.background = texture;
     });
     const camera = new PerspectiveCamera(5, window.innerWidth / window.innerHeight, 1, 300);
