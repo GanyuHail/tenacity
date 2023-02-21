@@ -24,14 +24,14 @@ function App() {
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(
-      10,
+      5,
       window.innerWidth / window.innerHeight,
       1,
-      500
+      300
     );
     camera.position.x = 0;
     camera.position.z = 0;
-    camera.position.y = 3;
+    camera.position.y = 1.5;
     camera.lookAt(0, 0, 0);
 
     const canvas = document.getElementById('myThreeJsCanvas')
