@@ -37900,7 +37900,7 @@ function App() {
     };
     const scene = new Scene();
     const loader2 = new TextureLoader();
-    loader2.load("./src/filteredbg.jpg", function(texture) {
+    loader2.load("https://raw.githubusercontent.com/GanyuHail/romance/main/src/filteredbg.jpg", function(texture) {
       scene.background = texture;
     });
     const camera = new PerspectiveCamera(5, window.innerWidth / window.innerHeight, 1, 300);
