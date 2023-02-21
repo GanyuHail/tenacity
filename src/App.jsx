@@ -30,8 +30,8 @@ function App() {
       500
     );
     camera.position.x = 0;
-    camera.position.z = 5;
-    camera.position.y = 0;
+    camera.position.z = 0;
+    camera.position.y = 3;
     camera.lookAt(0, 0, 0);
 
     const canvas = document.getElementById('myThreeJsCanvas')
@@ -61,7 +61,7 @@ function App() {
     DRACOLoader.setDecoderPath('/three-dracoloader');
     loader.setDRACOLoader(dracoLoader);
 
-    loader.load('romance.gltf', function (gltf) {
+    loader.load('romance2.gltf', function (gltf) {
       scene.add(gltf.scene);
     });
     //   function (xhr) {

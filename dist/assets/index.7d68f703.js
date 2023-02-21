@@ -37901,8 +37901,8 @@ function App() {
     const scene = new Scene();
     const camera = new PerspectiveCamera(10, window.innerWidth / window.innerHeight, 1, 500);
     camera.position.x = 0;
-    camera.position.z = 5;
-    camera.position.y = 0;
+    camera.position.z = 0;
+    camera.position.y = 3;
     camera.lookAt(0, 0, 0);
     const canvas = document.getElementById("myThreeJsCanvas");
     const renderer = new WebGLRenderer({
@@ -37920,7 +37920,7 @@ function App() {
     var dracoLoader = new threeDracoloader();
     threeDracoloader.setDecoderPath("/three-dracoloader");
     loader.setDRACOLoader(dracoLoader);
-    loader.load("romance.gltf", function(gltf) {
+    loader.load("romance2.gltf", function(gltf) {
       scene.add(gltf.scene);
     });
     const raycaster = new Raycaster();
