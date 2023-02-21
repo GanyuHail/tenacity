@@ -37899,6 +37899,7 @@ function App() {
       progressBarContainer.style.display = "none";
     };
     const scene = new Scene();
+    scene.background = null;
     const camera = new PerspectiveCamera(5, window.innerWidth / window.innerHeight, 1, 300);
     camera.position.x = 0;
     camera.position.z = 0;
