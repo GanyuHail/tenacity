@@ -23,6 +23,12 @@ function App() {
 
     const scene = new THREE.Scene();
 
+    //Load background texture
+    const loader2 = new THREE.TextureLoader();
+    loader2.load('https://raw.githubusercontent.com/GanyuHail/romance/main/src/filteredbg.jpg', function (texture) {
+      scene.background = texture;
+    });
+
     const camera = new THREE.PerspectiveCamera(
       5,
       window.innerWidth / window.innerHeight,

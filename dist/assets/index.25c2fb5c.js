@@ -37899,6 +37899,10 @@ function App() {
       progressBarContainer.style.display = "none";
     };
     const scene = new Scene();
+    const loader2 = new TextureLoader();
+    loader2.load("https://raw.githubusercontent.com/GanyuHail/romance/main/src/filteredbg.jpg", function(texture) {
+      scene.background = texture;
+    });
     const camera = new PerspectiveCamera(5, window.innerWidth / window.innerHeight, 1, 300);
     camera.position.x = 0;
     camera.position.z = 0;
