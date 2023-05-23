@@ -21,13 +21,7 @@ function App() {
       progressBarContainer.style.display = 'none';
     };
 
-    const scene = new THREE.Scene();
-
-    //Load background texture
-    const loader2 = new THREE.TextureLoader();
-    loader2.load('https://raw.githubusercontent.com/GanyuHail/romance/main/src/filteredbg.jpg', function (texture) {
-      scene.background = texture;
-    });
+    const scene = new THREE.Scene();   
 
     const camera = new THREE.PerspectiveCamera(
       5,
@@ -106,13 +100,13 @@ function App() {
 
     function onMouseDown(event) {
       if (selectedObject) {
-        window.location.href = "https://www.romancefc.com/";
+        window.location.href = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
       }
     };
 
     function touchEnd(event) {
       if (selectedObject) {
-        window.location.href = "https://www.romancefc.com/";
+        window.location.href = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
       }
     };
 
@@ -133,6 +127,7 @@ function App() {
 
     renderer.setAnimationLoop(function () {
       renderer.render(scene, camera);
+      renderer.setClearColor( 0x000000, 0 ); 
     });
   }, []);
 
