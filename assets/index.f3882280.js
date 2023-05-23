@@ -37899,10 +37899,6 @@ function App() {
       progressBarContainer.style.display = "none";
     };
     const scene = new Scene();
-    const loader2 = new TextureLoader();
-    loader2.load("https://raw.githubusercontent.com/GanyuHail/romance/main/src/filteredbg.jpg", function(texture) {
-      scene.background = texture;
-    });
     const camera = new PerspectiveCamera(5, window.innerWidth / window.innerHeight, 1, 300);
     camera.position.x = 0;
     camera.position.z = 0;
@@ -37950,12 +37946,12 @@ function App() {
     }
     function onMouseDown(event) {
       if (selectedObject) {
-        window.location.href = "https://www.romancefc.com/";
+        window.location.href = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
       }
     }
     function touchEnd(event) {
       if (selectedObject) {
-        window.location.href = "https://www.romancefc.com/";
+        window.location.href = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
       }
     }
     function render() {
@@ -37971,6 +37967,7 @@ function App() {
     animate();
     renderer.setAnimationLoop(function() {
       renderer.render(scene, camera);
+      renderer.setClearColor(0, 0);
     });
   }, []);
   return /* @__PURE__ */ jsx("div", {
