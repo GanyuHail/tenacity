@@ -37930,6 +37930,7 @@ function App() {
     window.addEventListener("touchend", touchEnd);
     function onPointerMove(event) {
       if (selectedObject) {
+        selectedObject.material.color.set("pink");
         selectedObject = null;
       }
       pointer.x = event.clientX / window.innerWidth * 2 - 1;
