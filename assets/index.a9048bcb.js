@@ -37901,7 +37901,7 @@ function App() {
     const scene = new Scene();
     const camera = new PerspectiveCamera(5, window.innerWidth / window.innerHeight, 1, 300);
     camera.position.x = 0;
-    camera.position.z = 0;
+    camera.position.z = 20;
     camera.position.y = 1.5;
     camera.lookAt(0, 0, 0);
     const canvas = document.getElementById("myThreeJsCanvas");
