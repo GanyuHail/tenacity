@@ -31,7 +31,7 @@ function App() {
     );
     camera.position.x = 0;
     camera.position.z = 0;
-    camera.position.y = 1.5;
+    camera.position.y = 100;
     camera.lookAt(0, 0, 0);
 
     const canvas = document.getElementById('myThreeJsCanvas')
@@ -56,7 +56,7 @@ function App() {
     // spotLight.physicallyCorrectLights = true;
     // scene.add(spotLight2);
 
-    const loader = new GLTFLoader().setPath('https://raw.githubusercontent.com/GanyuHail/romance/main/src/');
+    const loader = new GLTFLoader().setPath('https://raw.githubusercontent.com/GanyuHail/tenacity/main/src/');
     var dracoLoader = new DRACOLoader();
     DRACOLoader.setDecoderPath('/three-dracoloader');
     loader.setDRACOLoader(dracoLoader);
@@ -78,7 +78,7 @@ function App() {
 
     function onPointerMove(event) {
       if (selectedObject) {
-        //selectedObject.material.color.set('white');
+        selectedObject.material.color.set('white');
         selectedObject = null;
       }
 
@@ -93,20 +93,20 @@ function App() {
 
         if (intersect && intersect.object) {
           selectedObject = intersect.object;
-          intersect.object.material.color.set("pink");
+          intersect.object.material.color.set("white");
         }
       }
     };
 
     function onMouseDown(event) {
       if (selectedObject) {
-        window.location.href = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
+        window.open = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
       }
     };
 
     function touchEnd(event) {
       if (selectedObject) {
-        window.location.href = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
+        window.open = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
       }
     };
 
@@ -117,6 +117,7 @@ function App() {
     window.requestAnimationFrame(render);
 
     const controls = new OrbitControls(camera, renderer.domElement);
+    controls.autoRotate = true;
 
     const animate = () => {
       controls.update();

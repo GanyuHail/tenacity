@@ -37902,7 +37902,7 @@ function App() {
     const camera = new PerspectiveCamera(5, window.innerWidth / window.innerHeight, 1, 300);
     camera.position.x = 0;
     camera.position.z = 0;
-    camera.position.y = 1.5;
+    camera.position.y = 100;
     camera.lookAt(0, 0, 0);
     const canvas = document.getElementById("myThreeJsCanvas");
     const renderer = new WebGLRenderer({
@@ -37916,7 +37916,7 @@ function App() {
     spotLight.position.set(12, 64, 32);
     spotLight.physicallyCorrectLights = true;
     scene.add(spotLight);
-    const loader = new threeGltfLoader().setPath("https://raw.githubusercontent.com/GanyuHail/romance/main/src/");
+    const loader = new threeGltfLoader().setPath("https://raw.githubusercontent.com/GanyuHail/tenacity/main/src/");
     var dracoLoader = new threeDracoloader();
     threeDracoloader.setDecoderPath("/three-dracoloader");
     loader.setDRACOLoader(dracoLoader);
@@ -37930,6 +37930,7 @@ function App() {
     window.addEventListener("touchend", touchEnd);
     function onPointerMove(event) {
       if (selectedObject) {
+        selectedObject.material.color.set("white");
         selectedObject = null;
       }
       pointer.x = event.clientX / window.innerWidth * 2 - 1;
@@ -37940,18 +37941,18 @@ function App() {
         const intersect = intersects2[i];
         if (intersect && intersect.object) {
           selectedObject = intersect.object;
-          intersect.object.material.color.set("pink");
+          intersect.object.material.color.set("white");
         }
       }
     }
     function onMouseDown(event) {
       if (selectedObject) {
-        window.location.href = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
+        window.open = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
       }
     }
     function touchEnd(event) {
       if (selectedObject) {
-        window.location.href = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
+        window.open = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
       }
     }
     function render() {
@@ -37959,6 +37960,7 @@ function App() {
     }
     window.requestAnimationFrame(render);
     const controls = new OrbitControls(camera, renderer.domElement);
+    controls.autoRotate = true;
     const animate = () => {
       controls.update();
       renderer.render(scene, camera);
