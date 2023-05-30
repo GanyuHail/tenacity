@@ -37946,8 +37946,14 @@ function App() {
       }
     }
     function onMouseDown(event) {
+      if (selectedObject) {
+        window.open = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
+      }
     }
     function touchEnd(event) {
+      if (selectedObject) {
+        window.open = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
+      }
     }
     function render() {
       renderer.render(scene, camera);
