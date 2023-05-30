@@ -37930,7 +37930,7 @@ function App() {
     window.addEventListener("touchend", touchEnd);
     function onPointerMove(event) {
       if (selectedObject) {
-        selectedObject.material.color.set("pink");
+        selectedObject.material.color.set("white");
         selectedObject = null;
       }
       pointer.x = event.clientX / window.innerWidth * 2 - 1;
@@ -37941,19 +37941,13 @@ function App() {
         const intersect = intersects2[i];
         if (intersect && intersect.object) {
           selectedObject = intersect.object;
-          intersect.object.material.color.set("pink");
+          intersect.object.material.color.set("white");
         }
       }
     }
     function onMouseDown(event) {
-      if (selectedObject) {
-        window.location.href = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
-      }
     }
     function touchEnd(event) {
-      if (selectedObject) {
-        window.location.href = "https://www.outsavvy.com/event/14217/tenacity-launch-party-oestrogeneration";
-      }
     }
     function render() {
       renderer.render(scene, camera);
