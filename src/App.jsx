@@ -136,7 +136,7 @@ function App() {
     window.requestAnimationFrame(render);
 
     const controls = new OrbitControls(camera, renderer.domElement);
-    controls.autoRotate = true;
+    // controls.autoRotate = true;
 
     const animate = () => {
       controls.update();
