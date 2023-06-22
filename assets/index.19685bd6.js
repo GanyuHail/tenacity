@@ -35172,7 +35172,7 @@ const three_module = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.define
 }, Symbol.toStringTag, { value: "Module" }));
 const require$$0 = /* @__PURE__ */ getAugmentedNamespace(three_module);
 var THREE$2 = require$$0;
-var _GLTFLoader = function() {
+(function() {
   function GLTFLoader(manager) {
     THREE$2.Loader.call(this, manager);
     this.dracoLoader = null;
@@ -36862,8 +36862,7 @@ var _GLTFLoader = function() {
     };
   }();
   return GLTFLoader;
-}();
-var threeGltfLoader = _GLTFLoader;
+})();
 var THREE$1 = require$$0;
 var DRACOLoader = function(manager) {
   THREE$1.Loader.call(this, manager);
@@ -37235,7 +37234,6 @@ DRACOLoader.releaseDecoderModule = function() {
 DRACOLoader.getDecoderModule = function() {
   console.warn("THREE.DRACOLoader: The .getDecoderModule() method has been removed. Use instance methods.");
 };
-var threeDracoloader = DRACOLoader;
 var OrbitControls = function(object, domElement) {
   if (domElement === void 0)
     console.warn('THREE.OrbitControls: The second parameter "domElement" is now mandatory.');
@@ -37916,13 +37914,12 @@ function App() {
     spotLight.position.set(12, 64, 32);
     spotLight.physicallyCorrectLights = true;
     scene.add(spotLight);
-    const loader = new threeGltfLoader().setPath("https://raw.githubusercontent.com/GanyuHail/tenacity/main/src/");
-    var dracoLoader = new threeDracoloader();
-    threeDracoloader.setDecoderPath("/three-dracoloader");
-    loader.setDRACOLoader(dracoLoader);
-    loader.load("tenacity5.gltf", function(gltf) {
-      scene.add(gltf.scene);
+    const geometry = new BoxGeometry(1, 1, 1);
+    const material = new MeshBasicMaterial({
+      color: 65280
     });
+    const cube = new Mesh(geometry, material);
+    scene.add(cube);
     const raycaster = new Raycaster();
     const pointer = new Vector2();
     window.addEventListener("pointermove", onPointerMove);
