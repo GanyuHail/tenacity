@@ -9,17 +9,17 @@ let selectedObject = null;
 function App() {
   useEffect(() => {
 
-    const progressBar = document.getElementById('progress-bar');
-    THREE.DefaultLoadingManager.onProgress = function (url, loaded, total) {
-      progressBar.value = (loaded / total) * 100;
-    };
-    THREE.DefaultLoadingManager.onStart = function (url, loaded, total) {
-      progressBar.value = (loaded / total) * 100;
-    };
-    const progressBarContainer = document.querySelector('.progress-bar-container');
-    THREE.DefaultLoadingManager.onLoad = function () {
-      progressBarContainer.style.display = 'none';
-    };
+    // const progressBar = document.getElementById('progress-bar');
+    // THREE.DefaultLoadingManager.onProgress = function (url, loaded, total) {
+    //   progressBar.value = (loaded / total) * 100;
+    // };
+    // THREE.DefaultLoadingManager.onStart = function (url, loaded, total) {
+    //   progressBar.value = (loaded / total) * 100;
+    // };
+    // const progressBarContainer = document.querySelector('.progress-bar-container');
+    // THREE.DefaultLoadingManager.onLoad = function () {
+    //   progressBarContainer.style.display = 'none';
+    // };
 
     const scene = new THREE.Scene();
 
@@ -69,7 +69,21 @@ function App() {
 
     //   },
 
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
+    // var loader = new THREE.TextureLoader();
+    // var mats = [
+    //   pictureURL1, //those are strings with urls, for example: "https://threejs.org/examples/textures"/uv_grid_opengl.jpg
+    //   pictureURL2,
+    //   pictureURL3,
+    //   pictureURL4,
+    //   pictureURL5,
+    //   pictureURL6,
+    // ].map(pic => {
+    //   return new THREE.MeshLambertMaterial({ map: loader.load(pic) });
+    // });
+    // var geom = new THREE.BoxBufferGeometry(2, 2, 2);
+    // var box = new THREE.Mesh(geom, mats);
+
+    const geometry = new THREE.BoxGeometry(25.4, 34.4, 1);
     const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
