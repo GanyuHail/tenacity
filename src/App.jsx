@@ -21,7 +21,7 @@ function App() {
       progressBarContainer.style.display = 'none';
     };
 
-    const scene = new THREE.Scene();   
+    const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(
       5,
@@ -56,18 +56,23 @@ function App() {
     // spotLight.physicallyCorrectLights = true;
     // scene.add(spotLight2);
 
-    const loader = new GLTFLoader().setPath('https://raw.githubusercontent.com/GanyuHail/tenacity/main/src/');
-    var dracoLoader = new DRACOLoader();
-    DRACOLoader.setDecoderPath('/three-dracoloader');
-    loader.setDRACOLoader(dracoLoader);
+    // const loader = new GLTFLoader().setPath('https://raw.githubusercontent.com/GanyuHail/tenacity/main/src/');
+    // var dracoLoader = new DRACOLoader();
+    // DRACOLoader.setDecoderPath('/three-dracoloader');
+    // loader.setDRACOLoader(dracoLoader);
 
-    loader.load('tenacity5.gltf', function (gltf) {
-      scene.add(gltf.scene);
-    });
+    // loader.load('tenacity5.gltf', function (gltf) {
+    //   scene.add(gltf.scene);
+    // });
     //   function (xhr) {
     //     console.log((xhr.loaded / xhr.total * 100) + '% loaded');
 
     //   },
+
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
 
     const raycaster = new THREE.Raycaster();
     const pointer = new THREE.Vector2();
@@ -128,7 +133,7 @@ function App() {
 
     renderer.setAnimationLoop(function () {
       renderer.render(scene, camera);
-      renderer.setClearColor( 0x000000, 0 ); 
+      renderer.setClearColor(0x000000, 0);
     });
   }, []);
 
