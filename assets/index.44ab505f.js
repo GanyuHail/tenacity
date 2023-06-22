@@ -37885,17 +37885,6 @@ const jsx = jsxRuntime.exports.jsx;
 let selectedObject = null;
 function App() {
   react.exports.useEffect(() => {
-    const progressBar = document.getElementById("progress-bar");
-    DefaultLoadingManager.onProgress = function(url, loaded, total) {
-      progressBar.value = loaded / total * 100;
-    };
-    DefaultLoadingManager.onStart = function(url, loaded, total) {
-      progressBar.value = loaded / total * 100;
-    };
-    const progressBarContainer = document.querySelector(".progress-bar-container");
-    DefaultLoadingManager.onLoad = function() {
-      progressBarContainer.style.display = "none";
-    };
     const scene = new Scene();
     const camera = new PerspectiveCamera(5, window.innerWidth / window.innerHeight, 1, 300);
     camera.position.x = 0;
@@ -37914,7 +37903,7 @@ function App() {
     spotLight.position.set(12, 64, 32);
     spotLight.physicallyCorrectLights = true;
     scene.add(spotLight);
-    const geometry = new BoxGeometry(1, 1, 1);
+    const geometry = new BoxGeometry(25.4, 34.4, 1);
     const material = new MeshBasicMaterial({
       color: 65280
     });
